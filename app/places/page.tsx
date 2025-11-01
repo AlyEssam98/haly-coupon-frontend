@@ -8,7 +8,7 @@ export default function PlacesPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/coupons")
+    fetch("https://haly-coupon-backend-production.up.railway.app/api/coupons")
       .then((r) => r.json())
       .then((data) => {
         const flat = Array.isArray(data) ? data : Object.values(data).flat();
