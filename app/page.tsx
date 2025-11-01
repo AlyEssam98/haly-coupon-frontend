@@ -7,7 +7,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/coupons")
+    fetch("https://haly-coupon-backend-production.up.railway.app/api/coupons")
       .then((r) => r.json())
       .then((data) => {
         // Ensure it's always an array (even if backend returns a map)
